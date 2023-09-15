@@ -16,6 +16,12 @@
 };
  */
 
+// Overrides nice_view cs_gpios pin to D0 from D1, 
+// D1 on kyria is shared with LED's and causes issues.
+&nice_view_spi {
+  cs-gpios = <&pro_micro 0 GPIO_ACTIVE_HIGH>;
+};
+
 / {
     keymap {
         compatible = "zmk,keymap";
