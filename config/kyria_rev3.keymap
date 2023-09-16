@@ -56,8 +56,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "{}_RETURN_ONHOLD_TT_ONTAP";
             bindings =
-                <&twokey_ret LEFT_BRACE RIGHT_BRACE>,
-                <&dbl_key T>;
+                <&twokey_ret LEFT_BRACE RIGHT_BRACE &dbl_key T>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
