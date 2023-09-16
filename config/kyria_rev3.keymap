@@ -40,7 +40,7 @@
             bindings 
                 = <&kp LEFT_BRACE>
                 , <&kp RIGHT_BRACE>
-                , <&macro_param_1to1> <&kp MACRO_PLACEHOLDER>;
+                , <&macro_param_1to1>, <&kp MACRO_PLACEHOLDER>;
         };
     };
 
