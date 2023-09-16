@@ -33,30 +33,23 @@
                 , <&macro_param_1to1>, <&kp MACRO_PLACEHOLDER>;
         };
 
-        cb_ocr: cb_ocr {
-            compatible = "zmk,behavior-macro";
-            label = "CURL_BRCKT_OPENCLOSE_RET";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_BRACE &kp RIGHT_BRACE &kp LEFT>;
-        };
-
-        twokey_ret: twokey_ret {
-            compatible = "zmk,behavior-macro-two-param";
-            label = "TWOKEY_RET";
-            #binding-cells = <2>;
+        cboc: cboc {
+            compatible = "zmk,behavior-macro-one-param";
+            label = "CURL_BRCKT_OPENCLOSE_EXTRAKEY";
+            #binding-cells = <1>;
             bindings 
-                = <&macro_param_1to1>, <&kp MACRO_PLACEHOLDER>
-                , <&macro_param_2to1>, <&kp MACRO_PLACEHOLDER>
-                , <&kp LEFT>;
+                = <&kp LEFT_BRACE>
+                , <&kp RIGHT_BRACE>
+                , <&macro_param_1to1> <&kp MACRO_PLACEHOLDER>;
         };
     };
 
     behaviors {
-        cb_ocr_tt: cb_ocr_tt {
+        cboc_dbl_tap: cboc_dbl_tap {
             compatible = "zmk,behavior-hold-tap";
-            label = "{}_RETURN_ONHOLD_TT_ONTAP";
+            label = "{}+KEY1_ONHOLD_DBL_KEY2_ONTAP";
             bindings =
-                <&cb_ocr>,
+                <&cboc>,
                 <&dbl_key>;
 
             #binding-cells = <2>;
@@ -69,7 +62,16 @@
             #binding-cells = <0>;
             bindings =
                 <&mt LEFT_BRACE T>,
-                <&cb_ocr_tt 0 T>;
+                <&cboc_dbl_tap LEFT T>;
+        };
+
+        td_g: td_g {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAPDANCE_FOR_G";
+            #binding-cells = <0>;
+            bindings =
+                <&mt LEFT_BRACKET G>,
+                <&cboc_dbl_tap OPER G>;
         };
     };
 
@@ -85,7 +87,7 @@
 
             bindings = <
 &kp ESC    &kp Q  &kp W  &kp E     &kp R    &td_t                                              &kp Y    &kp U     &kp I      &kp O    &kp P     &kp BSLH
-&kp TAB    &kp A  &kp S  &kp D     &kp F    &kp G                                              &kp H    &kp J     &kp K      &kp L    &kp SEMI  &kp SQT
+&kp TAB    &kp A  &kp S  &kp D     &kp F    &td_g                                              &kp H    &kp J     &kp K      &kp L    &kp SEMI  &kp SQT
 &kp LSHFT  &kp Z  &kp X  &kp C     &kp V    &kp B    &kp LSHFT  &kp LSHFT  &mo 1    &kp LSHFT  &kp N    &kp M     &kp COMMA  &kp DOT  &kp FSLH  &kp RCTRL
                          &kp LGUI  &kp DEL  &kp RET  &kp SPACE  &kp ESC    &kp RET  &kp SPACE  &kp TAB  &kp BSPC  &kp RALT
             >;
