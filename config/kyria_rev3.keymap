@@ -35,6 +35,12 @@
             #binding-cells = <1>;
             bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
         };
+        dbl_key_l: dbl_key_l {
+            compatible = "zmk,behavior-macro-one-param";
+            label = "DBL_KEY_LEFT";
+            #binding-cells = <1>;
+            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_1to1 &kp MACRO_PLACEHOLDER &kp LEFT>;
+        };
         cboc: cboc {
             compatible = "zmk,behavior-macro-one-param";
             label = "CURL_BRCKT_OPENCLOSE_EXTRAKEY";
@@ -104,6 +110,16 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
+        dbl_mt_l: dbl_mt_l {
+            compatible = "zmk,behavior-hold-tap";
+            label = "DOUBLE_MODTAP+LEFT";
+            bindings =
+                <&dbl_key_l>,
+                <&dbl_key_l>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
         td_t: td_t {
             compatible = "zmk,behavior-tap-dance";
             label = "TAPDANCE_FOR_T";
@@ -151,6 +167,22 @@
             bindings =
                 <&mt RIGHT_BRACKET N>,
                 <&rboc_dbl_tap OPER N>;
+        };
+        td_qt: td_qt {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAPDANCE_FOR_QOUTES";
+            #binding-cells = <0>;
+            bindings =
+                <&mt DOUBLE_QUOTES SINGLE_QUOTE>,
+                <&dbl_mt_l DOUBLE_QUOTES SINGLE_QUOTE>;
+        };
+        td_cln: td_cln {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAPDANCE_COLLON";
+            #binding-cells = <0>;
+            bindings =
+                <&mt COLON SEMICOLON>,
+                <&dbl_key COLON>;
         };
         hml: homewrow_mods_left {
             compatible = "zmk,behavior-hold-tap";
@@ -213,7 +245,7 @@
 
             bindings = <
 &gresc     &kp Q  &kp W         &kp E            &kp R          &td_t                                                            &td_y      &kp U          &kp I        &kp O           &kp P     &kp BSLH
-&kp TAB    &kp A  &hml LCTRL S  &hml LEFT_ALT D  &hml LSHIFT F  &td_g                                                            &td_h      &hmr RSHIFT J  &hmr RALT K  &hmr RCTRL L    &kp SEMI  &kp SQT
+&kp TAB    &kp A  &hml LCTRL S  &hml LEFT_ALT D  &hml LSHIFT F  &td_g                                                            &td_h      &hmr RSHIFT J  &hmr RALT K  &hmr RCTRL L    &td_cln   &td_qt
 &kp LSHFT  &kp Z  &kp X         &kp C            &kp V          &td_b          &kp DELETE  &none      &kp PAUSE_BREAK  &kp UP    &td_n      &kp M          &kp COMMA    &ptrhold 0 DOT  &kp FSLH  &kp RCTRL
                                 &kp LGUI         &mo 1          &kp BACKSPACE  &spcund     &kp ENTER  &kp LEFT         &kp DOWN  &kp RIGHT  &mo 1          &none
             >;
