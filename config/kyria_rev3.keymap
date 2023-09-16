@@ -24,20 +24,6 @@
 
 / {
     macros {
-        dbl_t: dbl_t {
-            compatible = "zmk,behavior-macro";
-            label = "DBL_T";
-            #binding-cells = <0>;
-            bindings = <&kp T &kp T>;
-        };
-
-        cb_ocr: cb_ocr {
-            compatible = "zmk,behavior-macro";
-            label = "CURL_BRCKT_OPENCLOSE_RET";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_BRACE &kp RIGHT_BRACE &kp LEFT>;
-        };
-
         dbl_key: dbl_key {
             compatible = "zmk,behavior-macro-one-param";
             label = "DBL_KEY";
@@ -45,6 +31,13 @@
             bindings 
                 = <&macro_param_1to1>, <&kp MACRO_PLACEHOLDER>
                 , <&macro_param_1to1>, <&kp MACRO_PLACEHOLDER>;
+        };
+
+        cb_ocr: cb_ocr {
+            compatible = "zmk,behavior-macro";
+            label = "CURL_BRCKT_OPENCLOSE_RET";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_BRACE &kp RIGHT_BRACE &kp LEFT>;
         };
 
         twokey_ret: twokey_ret {
@@ -64,7 +57,7 @@
             label = "{}_RETURN_ONHOLD_TT_ONTAP";
             bindings =
                 <&cb_ocr>,
-                <&dbl_t>;
+                <&dbl_key>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -76,7 +69,7 @@
             #binding-cells = <0>;
             bindings =
                 <&mt LEFT_BRACE T>,
-                <&cb_ocr_tt 0 0>;
+                <&cb_ocr_tt 0 T>;
         };
     };
 
