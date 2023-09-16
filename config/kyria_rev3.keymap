@@ -5,7 +5,6 @@
  */
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
 /* Uncomment this block if using RGB
@@ -244,13 +243,11 @@
             //                     | GUI  | DEL  | RET  |  SPACE  |   ESC   |  |   RET   |  SPACE  | TAB  | BSPC  | R-ALT |
 
             bindings = <
-&gresc     &kp Q  &kp W         &kp E            &kp R          &td_t                                                            &td_y      &kp U          &kp I        &kp O           &kp P     &kp BSLH
-&kp TAB    &kp A  &hml LCTRL S  &hml LEFT_ALT D  &hml LSHIFT F  &td_g                                                            &td_h      &hmr RSHIFT J  &hmr RALT K  &hmr RCTRL L    &td_cln   &td_qt
-&kp LSHFT  &kp Z  &kp X         &kp C            &kp V          &td_b          &kp DELETE  &none      &kp PAUSE_BREAK  &kp UP    &td_n      &kp M          &kp COMMA    &ptrhold 0 DOT  &kp FSLH  &kp RCTRL
-                                &kp LGUI         &mo 1          &kp BACKSPACE  &spcund     &kp ENTER  &kp LEFT         &kp DOWN  &kp RIGHT  &mo 1          &none
+&gresc          &kp Q  &kp W         &kp E            &kp R          &td_t                                                            &td_y      &kp U          &kp I        &kp O           &kp P     &kp BSLH
+&kp TAB         &kp A  &hml LCTRL S  &hml LEFT_ALT D  &hml LSHIFT F  &td_g                                                            &td_h      &hmr RSHIFT J  &hmr RALT K  &hmr RCTRL L    &td_cln   &td_qt
+&mt LSHFT CAPS  &kp Z  &kp X         &kp C            &kp V          &td_b          &kp DELETE  &none      &kp PAUSE_BREAK  &kp UP    &td_n      &kp M          &kp COMMA    &ptrhold 0 DOT  &kp FSLH  &kp RCTRL
+                                     &kp LGUI         &mo 1          &kp BACKSPACE  &spcund     &kp ENTER  &kp LEFT         &kp DOWN  &kp RIGHT  &mo 1          &none
             >;
-
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
 
         function_layer {
@@ -261,13 +258,11 @@
             //                       |      |      |      |      |      |      |      |      |      |      |      |      |
 
             bindings = <
-&trans  &trans  &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2                                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans      &bt BT_SEL 3  &bt BT_SEL 4  &trans                                        &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans      &trans        &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                            &trans        &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&kp F1  &kp F2  &kp F3  &kp F4   &kp F5   &kp F6                                          &none    &kp N7  &kp N8  &kp N9  &kp STAR  &kp KP_DIVIDE
+&kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12                                         &none    &kp N4  &kp N5  &kp N6  &kp PLUS  &kp MINUS
+&none   &none   &none   &none    &none    &none    &none  &none  &none     &kp PG_UP      &none    &kp N1  &kp N2  &kp N3  &kp N0    &kp KP_DOT
+                        &none    &tog 1   &none    &none  &none  &kp HOME  &kp PAGE_DOWN  &kp END  &trans  &none
             >;
-
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
     };
 };
