@@ -52,15 +52,16 @@
     };
 
     behaviors {
-        cb_ocr_tt: cb_ocr_tt {
-            compatible = "zmk,behavior-hold-tap";
-            label = "{}_RETURN_ONHOLD_TT_ONTAP";
-            bindings =
-                <&twokey_ret LEFT_BRACE RIGHT_BRACE &dbl_key T>;
+        // cb_ocr_tt: cb_ocr_tt {
+        //     compatible = "zmk,behavior-hold-tap";
+        //     label = "{}_RETURN_ONHOLD_TT_ONTAP";
+        //     bindings =
+        //         <&twokey_ret LEFT_BRACE RIGHT_BRACE>,
+        //         <&dbl_key T>;
 
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-        };
+        //     #binding-cells = <2>;
+        //     tapping-term-ms = <200>;
+        // };
 
         td_t: td_t {
             compatible = "zmk,behavior-tap-dance";
@@ -68,7 +69,8 @@
             #binding-cells = <0>;
             bindings =
                 <&mt LEFT_BRACE T>,
-                <&cb_ocr_tt>;
+                // <&cb_ocr_tt>;
+                <&mt &twokey_ret LEFT_BRACE RIGHT_BRACE &dbl_key T>;
         };
     };
 
