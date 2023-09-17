@@ -264,15 +264,19 @@
 &sk LCTRL        &kp Z  &kp X         &kp C            &kp V          &td_b         &kp BACKSPACE  &kp DEL    &kp PAUSE_BREAK  &kp UP    &td_n      &kp M          &kp COMMA    &ptrhold 0 DOT  &kp FSLH  &kp LCTRL
                                       &kp LGUI         &sk LALT       &lsticktgl_1  &spcund        &kp ENTER  &kp LEFT         &kp DOWN  &kp RIGHT  &lsticktgl_2   &kp RALT
             >;
+
+            label = "abc";
         };
 
         num_layer {
             bindings = <
 &kp F1        &kp F2        &kp F3         &kp F4         &kp F5          &kp F6                                                    &none    &kp N7  &kp N8        &kp N9  &kp STAR  &kp KP_DIVIDE
 &mt LSHFT F7  &kp F8        &hml LCTRL F9  &hml LALT F10  &hml LSHFT F11  &kp F12                                                   &none    &kp N4  &kp N5        &kp N6  &kp PLUS  &kp MINUS
-&trans        &out OUT_TOG  &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2    &bt BT_SEL 3  &none  &bt BT_CLR  &none     &kp PG_UP      &none    &kp N1  &kp N2        &kp N3  &kp N0    &kp KP_DOT
-                                           &trans         &trans          &to 0         &none  &none       &kp HOME  &kp PAGE_DOWN  &kp END  &to 2   &kp KP_EQUAL
+&trans        &out OUT_TOG  &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2    &bt BT_SEL 3  &bt BT_CLR  &to 3  &none     &kp PG_UP      &none    &kp N1  &kp N2        &kp N3  &kp N0    &kp KP_DOT
+                                           &trans         &trans          &to 0         &none       &none  &kp HOME  &kp PAGE_DOWN  &kp END  &to 2   &kp KP_EQUAL
             >;
+
+            label = "123";
         };
 
         sym_layer {
@@ -282,6 +286,19 @@
 &none  &kp BACKSLASH  &kp PIPE  &kp KP_DIVIDE  &kp MINUS   &none      &none  &none  &none  &none  &none     &none       &none             &none       &none               &kp C_MUTE
                                 &none          &none       &to 1      &none  &none  &none  &none  &none     &to 0       &none
             >;
+
+            label = "!@#";
+        };
+
+        game_layer {
+            bindings = <
+&kp ESC    &kp TAB    &kp Q  &kp W     &kp E     &kp R                                              &none  &none  &none  &none  &none  &none
+&kp LCTRL  &kp LSHFT  &kp A  &kp S     &kp D     &kp F                                              &none  &none  &none  &none  &none  &none
+&kp M      &kp I      &kp Z  &kp X     &kp C     &kp V          &kp B      &to 0      &none  &none  &none  &none  &none  &none  &none  &none
+                             &kp CAPS  &kp LALT  &kp LC(LSHFT)  &kp SPACE  &kp ENTER  &none  &none  &none  &none  &none
+            >;
+
+            label = "GAME";
         };
     };
 };
