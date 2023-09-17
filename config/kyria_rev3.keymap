@@ -259,19 +259,19 @@
 
         default_layer {
             bindings = <
-&kp TAB          &kp Q  &kp W         &kp E            &kp R          &td_t                                                            &td_y      &kp U          &kp I        &kp O           &kp P     &gresc
-&mt LSHIFT CAPS  &kp A  &hml LCTRL S  &hml LEFT_ALT D  &hml LSHIFT F  &td_g                                                            &td_h      &hmr RSHIFT J  &hmr RALT K  &hmr RCTRL L    &td_cln   &td_qt
-&sk LCTRL        &kp Z  &kp X         &kp C            &kp V          &td_b          &kp DELETE  &none      &kp PAUSE_BREAK  &kp UP    &td_n      &kp M          &kp COMMA    &ptrhold 0 DOT  &kp FSLH  &none
-                                      &kp LGUI         &lsticktgl_1   &kp BACKSPACE  &spcund     &kp ENTER  &kp LEFT         &kp DOWN  &kp RIGHT  &lsticktgl_2   &none
+&kp TAB          &kp Q  &kp W         &kp E            &kp R          &td_t                                                              &td_y      &kp U          &kp I        &kp O           &kp P     &gresc
+&mt LSHIFT CAPS  &kp A  &hml LCTRL S  &hml LEFT_ALT D  &hml LSHIFT F  &td_g                                                              &td_h      &hmr RSHIFT J  &hmr RALT K  &hmr RCTRL L    &td_cln   &td_qt
+&sk LCTRL        &kp Z  &kp X         &kp C            &kp V          &td_b         &kp BACKSPACE  &kp DEL    &kp PAUSE_BREAK  &kp UP    &td_n      &kp M          &kp COMMA    &ptrhold 0 DOT  &kp FSLH  &kp LCTRL
+                                      &kp LGUI         &sk LALT       &lsticktgl_1  &spcund        &kp ENTER  &kp LEFT         &kp DOWN  &kp RIGHT  &lsticktgl_2   &kp RALT
             >;
         };
 
         num_layer {
             bindings = <
-&kp F1        &kp F2        &kp F3         &kp F4         &kp F5          &kp F6                                             &none    &kp N7  &kp N8        &kp N9  &kp STAR  &kp KP_DIVIDE
-&kp F7        &kp F8        &hml LCTRL F9  &hml LALT F10  &hml LSHFT F11  &kp F12                                            &none    &kp N4  &kp N5        &kp N6  &kp PLUS  &kp MINUS
-&out OUT_TOG  &bt BT_SEL 0  &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3    &bt BT_CLR  &none  &none  &none     &kp PG_UP      &none    &kp N1  &kp N2        &kp N3  &kp N0    &kp KP_DOT
-                                           &trans         &to 0           &none       &none  &none  &kp HOME  &kp PAGE_DOWN  &kp END  &to 2   &kp KP_EQUAL
+&kp F1        &kp F2        &kp F3         &kp F4         &kp F5          &kp F6                                                    &none    &kp N7  &kp N8        &kp N9  &kp STAR  &kp KP_DIVIDE
+&mt LSHFT F7  &kp F8        &hml LCTRL F9  &hml LALT F10  &hml LSHFT F11  &kp F12                                                   &none    &kp N4  &kp N5        &kp N6  &kp PLUS  &kp MINUS
+&trans        &out OUT_TOG  &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2    &bt BT_SEL 3  &none  &bt BT_CLR  &none     &kp PG_UP      &none    &kp N1  &kp N2        &kp N3  &kp N0    &kp KP_DOT
+                                           &trans         &trans          &to 0         &none  &none       &kp HOME  &kp PAGE_DOWN  &kp END  &to 2   &kp KP_EQUAL
             >;
         };
 
@@ -280,7 +280,7 @@
 &none  &kp EXCL       &kp AT    &kp HASH       &kp DOLLAR  &kp PRCNT                              &none  &none  &none  &none  &none  &none
 &none  &kp CARET      &kp AMPS  &kp STAR       &kp PLUS    &kp EQUAL                              &none  &none  &none  &none  &none  &none
 &none  &kp BACKSLASH  &kp PIPE  &kp KP_DIVIDE  &kp MINUS   &none      &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
-                                &none          &to 1       &none      &none  &none  &none  &none  &none  &to 0  &none
+                                &none          &none       &to 1      &none  &none  &none  &none  &none  &to 0  &none
             >;
         };
     };
