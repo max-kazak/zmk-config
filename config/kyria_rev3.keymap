@@ -236,7 +236,7 @@
             #binding-cells = <0>;
             mods = <(MOD_RSFT|MOD_LSFT)>;
         };
-        lsticktgl_1: layer_stick_toggle {
+        lsticktgl_1: layer_stick_toggle_1 {
             compatible = "zmk,behavior-tap-dance";
             label = "LAYER_STICK_TOGGLE_1";
             #binding-cells = <0>;
@@ -244,7 +244,7 @@
                 <&sl 1>,
                 <&tog 1>;
         };
-        lsticktgl_2: layer_stick_toggle {
+        lsticktgl_2: layer_stick_toggle_2 {
             compatible = "zmk,behavior-tap-dance";
             label = "LAYER_STICK_TOGGLE_2";
             #binding-cells = <0>;
