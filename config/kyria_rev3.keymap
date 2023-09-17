@@ -242,7 +242,7 @@
             #binding-cells = <0>;
             bindings =
                 <&sl 1>,
-                <&tog 1>;
+                <&to 1>;
         };
         lsticktgl_2: layer_stick_toggle_2 {
             compatible = "zmk,behavior-tap-dance";
@@ -250,7 +250,7 @@
             #binding-cells = <0>;
             bindings =
                 <&sl 2>,
-                <&tog 2>;
+                <&to 2>;
         };
     };
 
@@ -258,12 +258,6 @@
         compatible = "zmk,keymap";
 
         default_layer {
-            // ---------------------------------------------------------------------------------------------------------------------------------
-            // |  ESC  |  Q  |  W  |  E   |  R   |  T   |                                          |  Y   |  U    |  I    |  O   |   P   |   \  |
-            // |  TAB  |  A  |  S  |  D   |  F   |  G   |                                          |  H   |  J    |  K    |  L   |   ;   |   '  |
-            // | SHIFT |  Z  |  X  |  C   |  V   |  B   | L SHIFT | L SHIFT |  | LAYER 1 | L SHIFT |  N   |  M    |  ,    |  .   |   /   | CTRL |
-            //                     | GUI  | DEL  | RET  |  SPACE  |   ESC   |  |   RET   |  SPACE  | TAB  | BSPC  | R-ALT |
-
             bindings = <
 &kp TAB          &kp Q  &kp W         &kp E            &kp R          &td_t                                                            &td_y      &kp U          &kp I        &kp O           &kp P     &gresc
 &mt LSHIFT CAPS  &kp A  &hml LCTRL S  &hml LEFT_ALT D  &hml LSHIFT F  &td_g                                                            &td_h      &hmr RSHIFT J  &hmr RALT K  &hmr RCTRL L    &td_cln   &td_qt
@@ -273,17 +267,11 @@
         };
 
         num_layer {
-            // ---------------------------------------------------------------------------------------------------------------------------------
-            // |       |      |BT_CLR|BTSEL0|BTSEL1|BTSEL2|                                         |      |      |      |      |      |      |
-            // |       |      |      |BTSEL3|BTSEL4|      |                                         |      |      |      |      |      |      |
-            // |       |      |      |      |      |      |      |      |      |      |      |      |      |      |      |      |      |      |
-            //                       |      |      |      |      |      |      |      |      |      |      |      |      |
-
             bindings = <
 &kp F1        &kp F2        &kp F3         &kp F4         &kp F5          &kp F6                                             &none    &kp N7  &kp N8        &kp N9  &kp STAR  &kp KP_DIVIDE
 &kp F7        &kp F8        &hml LCTRL F9  &hml LALT F10  &hml LSHFT F11  &kp F12                                            &none    &kp N4  &kp N5        &kp N6  &kp PLUS  &kp MINUS
 &out OUT_TOG  &bt BT_SEL 0  &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3    &bt BT_CLR  &none  &none  &none     &kp PG_UP      &none    &kp N1  &kp N2        &kp N3  &kp N0    &kp KP_DOT
-                                           &trans         &tog 1          &none       &none  &none  &kp HOME  &kp PAGE_DOWN  &kp END  &trans  &kp KP_EQUAL
+                                           &trans         &to 0           &none       &none  &none  &kp HOME  &kp PAGE_DOWN  &kp END  &to 2   &kp KP_EQUAL
             >;
         };
 
@@ -292,7 +280,7 @@
 &none  &kp EXCL       &kp AT    &kp HASH       &kp DOLLAR  &kp PRCNT                              &none  &none  &none  &none  &none  &none
 &none  &kp CARET      &kp AMPS  &kp STAR       &kp PLUS    &kp EQUAL                              &none  &none  &none  &none  &none  &none
 &none  &kp BACKSLASH  &kp PIPE  &kp KP_DIVIDE  &kp MINUS   &none      &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
-                                &none          &none       &none      &none  &none  &none  &none  &none  &none  &none
+                                &none          &to 1       &none      &none  &none  &none  &none  &none  &to 0  &none
             >;
         };
     };
