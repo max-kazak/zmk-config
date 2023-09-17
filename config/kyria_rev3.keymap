@@ -24,7 +24,7 @@
 };
 
 &gresc {
-    mods = <(MOD_LALT|MOD_RALT|MOD_LSFT|MOD_RSFT)>;
+    mods = <(MOD_LALT|MOD_RALT|MOD_LSFT|MOD_RSFT|MOD_LCTL|MOD_RCTL)>;
     keep-mods = <(MOD_LSFT|MOD_RSFT)>;
 };
 
@@ -265,8 +265,8 @@
             bindings = <
 &kp TAB          &kp Q  &kp W         &kp E            &kp R          &td_t                                                              &td_y      &kp U          &kp I        &kp O           &kp P     &gresc
 &mt LSHIFT CAPS  &kp A  &hml LCTRL S  &hml LEFT_ALT D  &hml LSHIFT F  &td_g                                                              &td_h      &hmr RSHIFT J  &hmr RALT K  &hmr RCTRL L    &td_cln   &td_qt
-&sk LCTRL        &kp Z  &kp X         &kp C            &kp V          &td_b         &kp ENTER   &kp DEL        &kp PAUSE_BREAK  &kp UP    &td_n      &kp M          &kp COMMA    &ptrhold 0 DOT  &kp FSLH  &kp LCTRL
-                                      &kp LGUI         &sk LALT       &lsticktgl_1  &spcund     &kp BACKSPACE  &kp LEFT         &kp DOWN  &kp RIGHT  &lsticktgl_2   &kp RALT
+&sk LCTRL        &kp Z  &kp X         &kp C            &kp V          &td_b         &kp ENTER  &kp DEL        &kp PAUSE_BREAK  &kp UP    &td_n      &kp M          &kp COMMA    &ptrhold 0 DOT  &kp FSLH  &kp LCTRL
+                                      &kp LGUI         &sk LALT       &lsticktgl_1  &spcund    &kp BACKSPACE  &kp LEFT         &kp DOWN  &kp RIGHT  &lsticktgl_2   &kp RALT
             >;
 
             label = "abc";
