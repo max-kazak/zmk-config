@@ -296,10 +296,10 @@
 
         game_layer {
             bindings = <
-&kp ESC    &kp TAB    &kp Q  &kp W     &kp E     &kp R                                              &none  &none  &none  &none  &none  &none
-&kp LCTRL  &kp LSHFT  &kp A  &kp S     &kp D     &kp F                                              &none  &none  &none  &none  &none  &none
-&kp M      &ij        &kp Z  &kp X     &kp C     &kp V          &kp B      &gg        &none  &none  &none  &none  &none  &none  &none  &none
-                             &kp CAPS  &kp LALT  &kp LC(LSHFT)  &kp SPACE  &kp ENTER  &none  &none  &none  &none  &none
+&kp ESC  &none      &kp Q  &kp W     &kp E     &kp R                                          &none  &none  &none  &none  &none  &none
+&kp TAB  &kp SPACE  &kp A  &kp S     &kp D     &kp F                                          &none  &none  &none  &none  &none  &none
+&kp M    &ij        &kp Z  &kp X     &kp C     &kp V      &kp B      &gg        &none  &none  &none  &none  &none  &none  &none  &none
+                           &kp CAPS  &kp LALT  &kp LCTRL  &kp LSHFT  &kp ENTER  &none  &none  &none  &none  &none
             >;
 
             label = "GAME";
