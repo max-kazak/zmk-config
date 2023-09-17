@@ -252,6 +252,14 @@
                 <&sl 2>,
                 <&to 2>;
         };
+        gg: gg {
+            compatible = "zmk,behavior-tap-dance";
+            label = "GG";
+            #binding-cells = <0>;
+            bindings =
+                <&kp G>,
+                <&to 0>;
+        };
     };
 
     keymap {
@@ -294,7 +302,7 @@
             bindings = <
 &kp ESC    &kp TAB    &kp Q  &kp W     &kp E     &kp R                                              &none  &none  &none  &none  &none  &none
 &kp LCTRL  &kp LSHFT  &kp A  &kp S     &kp D     &kp F                                              &none  &none  &none  &none  &none  &none
-&kp M      &kp I      &kp Z  &kp X     &kp C     &kp V          &kp B      &to 0      &none  &none  &none  &none  &none  &none  &none  &none
+&kp M      &kp I      &kp Z  &kp X     &kp C     &kp V          &kp B      &gg        &none  &none  &none  &none  &none  &none  &none  &none
                              &kp CAPS  &kp LALT  &kp LC(LSHFT)  &kp SPACE  &kp ENTER  &none  &none  &none  &none  &none
             >;
 
