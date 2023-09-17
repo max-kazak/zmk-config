@@ -274,10 +274,10 @@
 
         num_layer {
             bindings = <
-&kp F11        &kp F1        &kp F2         &kp F3        &kp F4         &kp F5                                                    &none    &kp N7  &kp N8  &kp N9  &kp STAR  &kp KP_DIVIDE
-&mt LSHFT F12  &kp F6        &hml LCTRL F7  &hml LALT F8  &hml LSHFT F9  &kp F10                                                   &kp N0   &kp N4  &kp N5  &kp N6  &kp PLUS  &kp MINUS
-&trans         &out OUT_TOG  &bt BT_SEL 0   &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_SEL 3  &bt BT_CLR  &to 3  &none     &kp PG_UP      &kp N0   &kp N1  &kp N2  &kp N3  &kp DOT   &kp EQUAL
-                                            &trans        &trans         &to 0         &none       &none  &kp HOME  &kp PAGE_DOWN  &kp END  &to 2   &none
+&kp F11        &kp F1        &kp F2         &kp F3        &kp F4         &kp F5                                                           &none    &kp N7  &kp N8  &kp N9  &kp STAR  &kp KP_DIVIDE
+&mt LSHFT F12  &kp F6        &hml LCTRL F7  &hml LALT F8  &hml LSHFT F9  &kp F10                                                          &kp N0   &kp N4  &kp N5  &kp N6  &kp PLUS  &kp MINUS
+&trans         &bt BT_SEL 0  &bt BT_SEL 1   &bt BT_SEL 2  &bt BT_SEL 3   &bt BT_SEL 4  &out OUT_TOG  &to 3       &none     &kp PG_UP      &kp N0   &kp N1  &kp N2  &kp N3  &kp DOT   &kp EQUAL
+                                            &trans        &trans         &to 0         &none         &bt BT_CLR  &kp HOME  &kp PAGE_DOWN  &kp END  &to 2   &none
             >;
 
             label = "123";
