@@ -32,6 +32,10 @@
     release-after-ms = <2000>;
 };
 
+&mt {
+    tapping-term-ms = <100>;
+};
+
 / {
     macros {
         dbl_key: dbl_key {
@@ -81,7 +85,7 @@
                 <&dbl_key>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <100>;
         };
         rboc_dbl_tap: rboc_dbl_tap {
             compatible = "zmk,behavior-hold-tap";
@@ -91,7 +95,7 @@
                 <&dbl_key>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <100>;
         };
         sboc_dbl_tap: sboc_dbl_tap {
             compatible = "zmk,behavior-hold-tap";
@@ -101,7 +105,7 @@
                 <&dbl_key>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <100>;
         };
         dbl_mt_l: dbl_mt_l {
             compatible = "zmk,behavior-hold-tap";
@@ -111,7 +115,7 @@
                 <&dbl_key_l>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <100>;
         };
         td_t: td_t {
             compatible = "zmk,behavior-tap-dance";
@@ -211,7 +215,7 @@
                 <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <100>;
             flavor = "tap-preferred";
         };
         spcund: space_underscore {
