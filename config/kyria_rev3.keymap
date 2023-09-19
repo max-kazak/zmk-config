@@ -155,7 +155,7 @@
             #binding-cells = <0>;
             bindings =
                 <&mt LEFT_BRACKET B>,
-                <&rboc_dbl_tap LEFT B>;
+                <&sboc_dbl_tap LEFT B>;
         };
         td_n: td_n {
             compatible = "zmk,behavior-tap-dance";
@@ -163,7 +163,7 @@
             #binding-cells = <0>;
             bindings =
                 <&mt RIGHT_BRACKET N>,
-                <&rboc_dbl_tap OPER N>;
+                <&sboc_dbl_tap OPER N>;
         };
         td_qt: td_qt {
             compatible = "zmk,behavior-tap-dance";
