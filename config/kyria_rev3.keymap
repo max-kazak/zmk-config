@@ -193,6 +193,7 @@
             hold-trigger-on-release;
             tapping-term-ms = <150>;
             flavor = "balanced";
+            retro-tap;
         };
         hmr: homewrow_mods_right {
             compatible = "zmk,behavior-hold-tap";
@@ -206,6 +207,7 @@
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 30 31 40 41 42 43 44>;
             hold-trigger-on-release;
             flavor = "balanced";
+            retro-tap;
         };
         ptrhold: ptrhold {
             compatible = "zmk,behavior-hold-tap";
