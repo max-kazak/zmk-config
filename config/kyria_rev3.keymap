@@ -269,10 +269,10 @@
 
         default_layer {
             bindings = <
-&kp TAB          &kp Q  &kp W  &kp E     &kp R          &td_t                                                              &td_y      &kp U          &kp I      &kp O           &kp P      &gresc
-&mt LSHIFT CAPS  &kp A  &kp S  &kp D     &hml LSHIFT F  &td_g                                                              &td_h      &hmr RSHIFT J  &kp K      &kp L           &td_cln    &td_qt
-&sk LCTRL        &kp Z  &kp X  &kp C     &kp V          &td_b         &kp ENTER  &kp DEL        &kp PAUSE_BREAK  &kp UP    &td_n      &kp M          &kp COMMA  &ptrhold 0 DOT  &kp SLASH  &kp ENTER
-                               &kp LGUI  &sk LALT       &lsticktgl_1  &spcund    &kp BACKSPACE  &kp LEFT         &kp DOWN  &kp RIGHT  &lsticktgl_2   &kp RALT
+&kp TAB          &kp Q  &kp W  &kp E     &kp R          &td_t                                                           &td_y      &kp U          &kp I      &kp O           &kp P      &gresc
+&mt LSHIFT CAPS  &kp A  &kp S  &kp D     &hml LSHIFT F  &td_g                                                           &td_h      &hmr RSHIFT J  &kp K      &kp L           &td_cln    &td_qt
+&sk LCTRL        &kp Z  &kp X  &kp C     &kp V          &td_b         &kp ENTER  &kp DEL        &lsticktgl_2  &kp UP    &td_n      &kp M          &kp COMMA  &ptrhold 0 DOT  &kp SLASH  &kp ENTER
+                               &kp LGUI  &sk LALT       &lsticktgl_1  &spcund    &kp BACKSPACE  &kp LEFT      &kp DOWN  &kp RIGHT  &lsticktgl_2   &kp RALT
             >;
 
             label = "abc";
