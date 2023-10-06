@@ -80,9 +80,7 @@
         cboc_dbl_tap: cboc_dbl_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "{}+KEY1_ONHOLD_DBL_KEY2_ONTAP";
-            bindings =
-                <&cboc>,
-                <&dbl_key>;
+            bindings = <&cboc>, <&dbl_key>;
 
             #binding-cells = <2>;
             tapping-term-ms = <100>;
@@ -90,9 +88,7 @@
         rboc_dbl_tap: rboc_dbl_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "()+KEY1_ONHOLD_DBL_KEY2_ONTAP";
-            bindings =
-                <&rboc>,
-                <&dbl_key>;
+            bindings = <&rboc>, <&dbl_key>;
 
             #binding-cells = <2>;
             tapping-term-ms = <100>;
@@ -100,9 +96,7 @@
         sboc_dbl_tap: sboc_dbl_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "[]+KEY1_ONHOLD_DBL_KEY2_ONTAP";
-            bindings =
-                <&sboc>,
-                <&dbl_key>;
+            bindings = <&sboc>, <&dbl_key>;
 
             #binding-cells = <2>;
             tapping-term-ms = <100>;
@@ -110,9 +104,7 @@
         dbl_mt_l: dbl_mt_l {
             compatible = "zmk,behavior-hold-tap";
             label = "DOUBLE_MODTAP+LEFT";
-            bindings =
-                <&dbl_key_l>,
-                <&dbl_key_l>;
+            bindings = <&dbl_key_l>, <&dbl_key_l>;
 
             #binding-cells = <2>;
             tapping-term-ms = <100>;
@@ -121,49 +113,37 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAPDANCE_FOR_T";
             #binding-cells = <0>;
-            bindings =
-                <&mt LEFT_BRACE T>,
-                <&cboc_dbl_tap LEFT T>;
+            bindings = <&mt LEFT_BRACE T>, <&cboc_dbl_tap LEFT T>;
         };
         td_y: td_y {
             compatible = "zmk,behavior-tap-dance";
             label = "TAPDANCE_FOR_Y";
             #binding-cells = <0>;
-            bindings =
-                <&mt RIGHT_BRACE Y>,
-                <&cboc_dbl_tap OPER Y>;
+            bindings = <&mt RIGHT_BRACE Y>, <&cboc_dbl_tap OPER Y>;
         };
         td_g: td_g {
             compatible = "zmk,behavior-tap-dance";
             label = "TAPDANCE_FOR_G";
             #binding-cells = <0>;
-            bindings =
-                <&mt LEFT_PARENTHESIS G>,
-                <&rboc_dbl_tap LEFT G>;
+            bindings = <&mt LEFT_PARENTHESIS G>, <&rboc_dbl_tap LEFT G>;
         };
         td_h: td_h {
             compatible = "zmk,behavior-tap-dance";
             label = "TAPDANCE_FOR_H";
             #binding-cells = <0>;
-            bindings =
-                <&mt RIGHT_PARENTHESIS H>,
-                <&rboc_dbl_tap OPER H>;
+            bindings = <&mt RIGHT_PARENTHESIS H>, <&rboc_dbl_tap OPER H>;
         };
         td_b: td_b {
             compatible = "zmk,behavior-tap-dance";
             label = "TAPDANCE_FOR_B";
             #binding-cells = <0>;
-            bindings =
-                <&mt LEFT_BRACKET B>,
-                <&sboc_dbl_tap LEFT B>;
+            bindings = <&mt LEFT_BRACKET B>, <&sboc_dbl_tap LEFT B>;
         };
         td_n: td_n {
             compatible = "zmk,behavior-tap-dance";
             label = "TAPDANCE_FOR_N";
             #binding-cells = <0>;
-            bindings =
-                <&mt RIGHT_BRACKET N>,
-                <&sboc_dbl_tap OPER N>;
+            bindings = <&mt RIGHT_BRACKET N>, <&sboc_dbl_tap OPER N>;
         };
         td_qt: td_qt {
             compatible = "zmk,behavior-tap-dance";
@@ -177,16 +157,12 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAPDANCE_COLLON";
             #binding-cells = <0>;
-            bindings =
-                <&mt COLON SEMICOLON>,
-                <&dbl_key COLON>;
+            bindings = <&mt COLON SEMICOLON>, <&dbl_key COLON>;
         };
         hml: homewrow_mods_left {
             compatible = "zmk,behavior-hold-tap";
             label = "HML";
-            bindings =
-                <&kp>,
-                <&kp>;
+            bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
             hold-trigger-key-positions = <32 45 33 34 35 36 37 38 39 6 7 8 9 10 11 18 19 20 21 22 23 33 34 35 36 37 38 39 46 47 48 49>;
@@ -198,9 +174,7 @@
         hmr: homewrow_mods_right {
             compatible = "zmk,behavior-hold-tap";
             label = "HMR";
-            bindings =
-                <&kp>,
-                <&kp>;
+            bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <150>;
@@ -212,9 +186,7 @@
         ptrhold: ptrhold {
             compatible = "zmk,behavior-hold-tap";
             label = "PTRHOLD";
-            bindings =
-                <&ptr>,
-                <&kp>;
+            bindings = <&ptr>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -223,9 +195,7 @@
         spcund: space_underscore {
             compatible = "zmk,behavior-mod-morph";
             label = "SPCUND";
-            bindings =
-                <&kp SPACE>,
-                <&kp UNDERSCORE>;
+            bindings = <&kp SPACE>, <&kp UNDERSCORE>;
 
             #binding-cells = <0>;
             mods = <(MOD_RSFT|MOD_LSFT)>;
@@ -234,33 +204,33 @@
             compatible = "zmk,behavior-tap-dance";
             label = "LAYER_STICK_TOGGLE_1";
             #binding-cells = <0>;
-            bindings =
-                <&sl 1>,
-                <&to 1>;
+            bindings = <&sl 1>, <&to 1>;
         };
         lsticktgl_2: layer_stick_toggle_2 {
             compatible = "zmk,behavior-tap-dance";
             label = "LAYER_STICK_TOGGLE_2";
             #binding-cells = <0>;
-            bindings =
-                <&sl 2>,
-                <&to 2>;
+            bindings = <&sl 2>, <&to 2>;
         };
         gg: gg {
             compatible = "zmk,behavior-tap-dance";
             label = "GG";
             #binding-cells = <0>;
-            bindings =
-                <&kp G>,
-                <&to 0>;
+            bindings = <&kp G>, <&to 0>;
         };
         ij: ij {
             compatible = "zmk,behavior-tap-dance";
             label = "IJ";
             #binding-cells = <0>;
-            bindings =
-                <&kp I>,
-                <&kp J>;
+            bindings = <&kp I>, <&kp J>;
+        };
+        dotcomma: dotcomma {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DOTCOMMA";
+            bindings = <&kp KP_DOT>, <&kp KP_COMMA>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_LSFT|MOD_LALT|MOD_RCTL|MOD_RSFT|MOD_RALT)>;
         };
     };
 
@@ -282,7 +252,7 @@
             bindings = <
 &kp F11        &kp F1        &kp F2         &kp F3        &kp F4         &kp F5                                                         &none    &kp N7  &kp N8  &kp N9  &kp KP_ASTERISK  &kp KP_DIVIDE
 &mt LSHFT F12  &kp F6        &hml LCTRL F7  &hml LALT F8  &hml LSHFT F9  &kp F10                                                        &kp N0   &kp N4  &kp N5  &kp N6  &kp KP_PLUS      &kp KP_MINUS
-&trans         &bt BT_SEL 0  &bt BT_SEL 1   &bt BT_SEL 2  &bt BT_SEL 3   &bt BT_SEL 4  &out OUT_TOG  &to 3   &bt BT_CLR  &kp PG_UP      &kp N0   &kp N1  &kp N2  &kp N3  &kp KP_DOT       &kp KP_EQUAL
+&trans         &bt BT_SEL 0  &bt BT_SEL 1   &bt BT_SEL 2  &bt BT_SEL 3   &bt BT_SEL 4  &out OUT_TOG  &to 3   &bt BT_CLR  &kp PG_UP      &kp N0   &kp N1  &kp N2  &kp N3  &dotcomma        &kp KP_EQUAL
                                             &trans        &trans         &to 0         &trans        &trans  &kp HOME    &kp PAGE_DOWN  &kp END  &to 2   &none
             >;
 
