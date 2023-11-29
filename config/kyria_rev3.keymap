@@ -44,30 +44,35 @@
             #binding-cells = <1>;
             bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
         };
+
         dbl_key_l: dbl_key_l {
             compatible = "zmk,behavior-macro-one-param";
             label = "DBL_KEY_LEFT";
             #binding-cells = <1>;
             bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_1to1 &kp MACRO_PLACEHOLDER &kp LEFT>;
         };
+
         cboc: cboc {
             compatible = "zmk,behavior-macro-one-param";
             label = "CURL_BRCKT_OPENCLOSE_EXTRAKEY";
             #binding-cells = <1>;
             bindings = <&kp LEFT_BRACE &kp RIGHT_BRACE &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
         };
+
         rboc: rboc {
             compatible = "zmk,behavior-macro-one-param";
             label = "RND_BRCKT_OPENCLOSE_EXTRAKEY";
             #binding-cells = <1>;
             bindings = <&kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
         };
+
         sboc: sboc {
             compatible = "zmk,behavior-macro-one-param";
             label = "SQR_BRCKT_OPENCLOSE_EXTRAKEY";
             #binding-cells = <1>;
             bindings = <&kp LEFT_BRACKET &kp RIGHT_BRACKET &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
         };
+
         ptr: ptr {
             compatible = "zmk,behavior-macro";
             label = "PTR";
@@ -85,6 +90,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <100>;
         };
+
         rboc_dbl_tap: rboc_dbl_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "()+KEY1_ONHOLD_DBL_KEY2_ONTAP";
@@ -93,6 +99,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <100>;
         };
+
         sboc_dbl_tap: sboc_dbl_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "[]+KEY1_ONHOLD_DBL_KEY2_ONTAP";
@@ -101,6 +108,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <100>;
         };
+
         dbl_mt_l: dbl_mt_l {
             compatible = "zmk,behavior-hold-tap";
             label = "DOUBLE_MODTAP+LEFT";
@@ -109,42 +117,49 @@
             #binding-cells = <2>;
             tapping-term-ms = <100>;
         };
+
         td_t: td_t {
             compatible = "zmk,behavior-tap-dance";
             label = "TAPDANCE_FOR_T";
             #binding-cells = <0>;
             bindings = <&mt LEFT_BRACE T>, <&cboc_dbl_tap LEFT T>;
         };
+
         td_y: td_y {
             compatible = "zmk,behavior-tap-dance";
             label = "TAPDANCE_FOR_Y";
             #binding-cells = <0>;
             bindings = <&mt RIGHT_BRACE Y>, <&cboc_dbl_tap OPER Y>;
         };
+
         td_g: td_g {
             compatible = "zmk,behavior-tap-dance";
             label = "TAPDANCE_FOR_G";
             #binding-cells = <0>;
             bindings = <&mt LEFT_PARENTHESIS G>, <&rboc_dbl_tap LEFT G>;
         };
+
         td_h: td_h {
             compatible = "zmk,behavior-tap-dance";
             label = "TAPDANCE_FOR_H";
             #binding-cells = <0>;
             bindings = <&mt RIGHT_PARENTHESIS H>, <&rboc_dbl_tap OPER H>;
         };
+
         td_b: td_b {
             compatible = "zmk,behavior-tap-dance";
             label = "TAPDANCE_FOR_B";
             #binding-cells = <0>;
             bindings = <&mt LEFT_BRACKET B>, <&sboc_dbl_tap LEFT B>;
         };
+
         td_n: td_n {
             compatible = "zmk,behavior-tap-dance";
             label = "TAPDANCE_FOR_N";
             #binding-cells = <0>;
             bindings = <&mt RIGHT_BRACKET N>, <&sboc_dbl_tap OPER N>;
         };
+
         td_qt: td_qt {
             compatible = "zmk,behavior-tap-dance";
             label = "TAPDANCE_FOR_QOUTES";
@@ -153,12 +168,14 @@
                 <&mt DOUBLE_QUOTES SINGLE_QUOTE>,
                 <&dbl_mt_l DOUBLE_QUOTES SINGLE_QUOTE>;
         };
+
         td_cln: td_cln {
             compatible = "zmk,behavior-tap-dance";
             label = "TAPDANCE_COLLON";
             #binding-cells = <0>;
             bindings = <&mt COLON SEMICOLON>, <&dbl_key COLON>;
         };
+
         hml: homewrow_mods_left {
             compatible = "zmk,behavior-hold-tap";
             label = "HML";
@@ -171,6 +188,7 @@
             flavor = "tap-preferred";
             retro-tap;
         };
+
         hmr: homewrow_mods_right {
             compatible = "zmk,behavior-hold-tap";
             label = "HMR";
@@ -183,6 +201,7 @@
             flavor = "tap-preferred";
             retro-tap;
         };
+
         ptrhold: ptrhold {
             compatible = "zmk,behavior-hold-tap";
             label = "PTRHOLD";
@@ -192,6 +211,7 @@
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
         };
+
         spcund: space_underscore {
             compatible = "zmk,behavior-mod-morph";
             label = "SPCUND";
@@ -200,30 +220,35 @@
             #binding-cells = <0>;
             mods = <(MOD_RSFT|MOD_LSFT)>;
         };
+
         lsticktgl_1: layer_stick_toggle_1 {
             compatible = "zmk,behavior-tap-dance";
             label = "LAYER_STICK_TOGGLE_1";
             #binding-cells = <0>;
             bindings = <&sl 1>, <&to 1>;
         };
+
         lsticktgl_2: layer_stick_toggle_2 {
             compatible = "zmk,behavior-tap-dance";
             label = "LAYER_STICK_TOGGLE_2";
             #binding-cells = <0>;
             bindings = <&sl 2>, <&to 2>;
         };
+
         gg: gg {
             compatible = "zmk,behavior-tap-dance";
             label = "GG";
             #binding-cells = <0>;
             bindings = <&kp G>, <&to 0>;
         };
+
         ij: ij {
             compatible = "zmk,behavior-tap-dance";
             label = "IJ";
             #binding-cells = <0>;
             bindings = <&kp I>, <&kp J>;
         };
+
         dotcomma: dotcomma {
             compatible = "zmk,behavior-mod-morph";
             label = "DOTCOMMA";
@@ -272,10 +297,10 @@
 
         game_layer {
             bindings = <
-&kp ESC  &none      &kp Q  &kp W     &kp E     &kp R                                          &none  &none  &none  &none  &none  &none
-&kp TAB  &kp SPACE  &kp A  &kp S     &kp D     &kp F                                          &none  &none  &none  &none  &none  &none
-&kp M    &ij        &kp Z  &kp X     &kp C     &kp V      &kp B      &gg        &none  &none  &none  &none  &none  &none  &none  &none
-                           &kp CAPS  &kp LALT  &kp LCTRL  &kp LSHFT  &kp ENTER  &none  &none  &none  &none  &none
+&kp ESC  &none           &kp Q  &kp W     &kp E     &kp R                                          &none  &none  &none  &none  &none  &none
+&kp TAB  &kp LEFT_SHIFT  &kp A  &kp S     &kp D     &kp F                                          &none  &none  &none  &none  &none  &none
+&kp M    &ij             &kp Z  &kp X     &kp C     &kp V      &kp B      &gg        &none  &none  &none  &none  &none  &none  &none  &none
+                                &kp CAPS  &kp LALT  &kp LCTRL  &kp SPACE  &kp ENTER  &none  &none  &none  &none  &none
             >;
 
             label = "GAME";
