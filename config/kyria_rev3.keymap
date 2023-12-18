@@ -271,10 +271,10 @@
 
         default_layer {
             bindings = <
-&kp TAB          &kp Q  &kp W  &kp E     &kp R     &td_t                                                                  &td_y         &kp U      &kp I      &kp O           &kp P      &gresc
-&mt LSHIFT CAPS  &kp A  &kp S  &kp D     &kp F     &td_g                                                                  &td_h         &kp J      &kp K      &kp L           &td_cln    &td_qt
-&sk LCTRL        &kp Z  &kp X  &kp C     &kp V     &td_b         &kp ENTER  &kp DEL        &kp PAUSE_BREAK  &kp MINUS     &td_n         &kp M      &kp COMMA  &ptrhold 0 DOT  &kp SLASH  &kp BACKSLASH
-                               &kp LGUI  &sk LALT  &lsticktgl_1  &spcund    &kp BACKSPACE  &kp RSHIFT       &lsticktgl_4  &lsticktgl_2  &kp RCTRL  &kp RALT
+&kp TAB          &kp Q  &kp W  &kp E     &kp R              &td_t                                                                  &td_y         &kp U               &kp I      &kp O           &kp P      &gresc
+&mt LSHIFT CAPS  &kp A  &kp S  &kp D     &hml LEFT_SHIFT F  &td_g                                                                  &td_h         &hmr RIGHT_SHIFT J  &kp K      &kp L           &td_cln    &td_qt
+&sk LCTRL        &kp Z  &kp X  &kp C     &kp V              &td_b         &kp ENTER  &kp DEL        &kp PAUSE_BREAK  &kp MINUS     &td_n         &kp M               &kp COMMA  &ptrhold 0 DOT  &kp SLASH  &kp BACKSLASH
+                               &kp LGUI  &sk LALT           &lsticktgl_1  &spcund    &kp BACKSPACE  &sk RSHFT        &lsticktgl_4  &lsticktgl_2  &kp RCTRL           &kp RALT
             >;
 
             label = "abc";
