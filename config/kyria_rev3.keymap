@@ -296,7 +296,7 @@
 &trans  &kp EXCL       &kp AT    &kp HASH   &kp DOLLAR  &kp PRCNT                                   &none     &none     &kp INSERT  &kp PAUSE_BREAK  &kp PRINTSCREEN  &kp K_APPLICATION
 &trans  &kp CARET      &kp AMPS  &kp STAR   &kp LT      &kp GT                                      &kp HOME  &kp LEFT  &kp DOWN    &kp UP           &kp RIGHT        &kp END
 &trans  &kp BACKSLASH  &kp PIPE  &kp SLASH  &kp PLUS    &kp MINUS  &kp EQUAL  &trans  &none  &none  &none     &none     &none       &none            &none            &none
-                                 &trans     &trans      &none      &trans     &trans  &none  &none  &to 0     &none     &none
+                                 &trans     &trans      &none      &trans     &trans  &none  &to 0  &none     &none     &none
             >;
 
             label = "!@#";
