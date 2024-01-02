@@ -262,7 +262,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "LAYER_STICK_TOGGLE_4";
             #binding-cells = <0>;
-            bindings = <&mo 4>, <&to 4>;
+            bindings = <&mo 0>, <&to 0>;
         };
     };
 
@@ -273,33 +273,33 @@
             bindings = <
 &kp TAB          &kp Q  &kp W  &kp E     &kp R              &td_t                                                                  &td_y  &kp U               &kp I      &kp O           &kp P      &gresc
 &mt LSHIFT CAPS  &kp A  &kp S  &kp D     &hml LEFT_SHIFT F  &td_g                                                                  &td_h  &hmr RIGHT_SHIFT J  &kp K      &kp L           &td_cln    &td_qt
-&sk LCTRL        &kp Z  &kp X  &kp C     &kp V              &td_b         &kp ENTER  &kp DEL        &kp PAUSE_BREAK  &kp MINUS     &td_n  &kp M               &kp COMMA  &ptrhold 0 DOT  &kp SLASH  &kp BACKSLASH
-                               &kp LGUI  &sk LALT           &lsticktgl_1  &spcund    &kp BACKSPACE  &sk RSHFT        &lsticktgl_2  &none  &kp RCTRL           &kp RALT
+&sk LCTRL        &kp Z  &kp X  &kp C     &kp V              &td_b          &kp ENTER  &kp DEL       &kp PAUSE_BREAK  &kp MINUS     &td_n  &kp M               &kp COMMA  &ptrhold 0 DOT  &kp SLASH  &kp BACKSLASH
+                               &kp LGUI  &sk LALT           &kp BACKSPACE  &spcund    &lsticktgl_1  &sk RSHFT        &lsticktgl_2  &none  &kp RCTRL           &kp RALT
             >;
 
             label = "abc";
         };
 
-        num_layer {
+        symnum_layer {
             bindings = <
-&trans  &kp EXCL       &kp AT    &kp HASH   &kp DOLLAR  &kp PRCNT                                                       &none      &kp N7  &kp N8  &kp N9  &kp KP_ASTERISK  &kp KP_DIVIDE
-&trans  &kp CARET      &kp AMPS  &kp STAR   &kp LT      &kp GT                                                      &kp N0     &kp N4  &kp N5  &kp N6  &kp KP_PLUS      &kp KP_MINUS
+&trans  &kp EXCL       &kp AT    &kp HASH   &kp DOLLAR  &kp PRCNT                                              &none      &kp N7  &kp N8  &kp N9  &kp KP_ASTERISK  &kp KP_DIVIDE
+&trans  &kp CARET      &kp AMPS  &kp STAR   &kp LT      &kp GT                                                 &kp N0     &kp N4  &kp N5  &kp N6  &kp KP_PLUS      &kp KP_MINUS
 &trans  &kp BACKSLASH  &kp PIPE  &kp SLASH  &kp PLUS    &kp MINUS  &kp EQUAL  &trans  &kp BACKSPACE  &kp UP    &kp N0     &kp N1  &kp N2  &kp N3  &dotcomma        &kp KP_EQUAL
-                                 &trans     &trans      &none      &trans     &trans  &kp LEFT       &kp DOWN  &kp RIGHT  &none   &none
+                                 &trans     &trans      &trans     &trans     &to 0   &kp LEFT       &kp DOWN  &kp RIGHT  &none   &none
             >;
 
-            label = "123";
+            label = "!@# 123";
         };
 
-        symnav_layer {
+        funcnav_layer {
             bindings = <
-&kp F11        &kp F1        &kp F2         &kp F3        &kp F4         &kp F5                                   &none     &none     &kp INSERT  &kp PAUSE_BREAK  &kp PRINTSCREEN  &kp K_APPLICATION
-&mt LSHFT F12  &kp F6        &hml LCTRL F7  &hml LALT F8  &hml LSHFT F9  &kp F10                                  &kp HOME  &kp LEFT  &kp DOWN    &kp UP           &kp RIGHT        &kp END
+&kp F11        &kp F1        &kp F2         &kp F3        &kp F4         &kp F5                                           &none     &none     &kp INSERT  &kp PAUSE_BREAK  &kp PRINTSCREEN  &kp K_APPLICATION
+&mt LSHFT F12  &kp F6        &hml LCTRL F7  &hml LALT F8  &hml LSHFT F9  &kp F10                                          &kp HOME  &kp LEFT  &kp DOWN    &kp UP           &kp RIGHT        &kp END
 &bt BT_CLR     &bt BT_SEL 0  &bt BT_SEL 1   &bt BT_SEL 2  &bt BT_SEL 3   &bt BT_SEL 4  &out OUT_TOG  &to 3  &none  &none  &none     &none     &none       &none            &none            &none
-                                            &trans        &trans         &to 0         &trans        &trans  &none  &to 0  &none     &none     &none
+                                            &trans        &trans         &trans        &trans        &none  &none  &to 0  &none     &none     &none
             >;
 
-            label = "!@#";
+            label = "FUNC";
         };
 
         game_layer {
@@ -311,17 +311,6 @@
             >;
 
             label = "GAME";
-        };
-
-        macro {
-            bindings = <
-&none  &none  &none           &kp UP    &none      &none                              &none     &none     &none     &none   &none      &none
-&none  &none  &kp LEFT_ARROW  &kp DOWN  &kp RIGHT  &none                              &kp HOME  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp END
-&none  &none  &none           &none     &none      &none  &none  &none  &none  &none  &none     &none     &none     &none   &none      &none
-                              &none     &none      &none  &none  &none  &none  &to 0  &none     &none     &none
-            >;
-
-            label = "MACRO";
         };
     };
 };
