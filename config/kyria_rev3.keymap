@@ -278,7 +278,7 @@
 &trans  &kp EXCL       &kp AT    &kp HASH   &kp DOLLAR      &kp PRCNT                                   &none   &kp N7  &kp N8  &kp N9  &kp KP_ASTERISK  &kp KP_DIVIDE
 &trans  &kp CARET      &kp AMPS  &kp STAR   &hml LSHIFT LT  &kp GT                                      &kp N0  &kp N4  &kp N5  &kp N6  &kp KP_PLUS      &kp KP_MINUS
 &trans  &kp BACKSLASH  &kp PIPE  &kp SLASH  &kp PLUS        &kp MINUS  &kp EQUAL  &trans  &none  &none  &kp N0  &kp N1  &kp N2  &kp N3  &dotcomma        &kp KP_EQUAL
-                                 &trans     &trans          &trans     &trans     &none   &none  &to 0  &none   &none   &none
+                                 &trans     &trans          &none      &trans     &trans  &none  &to 0  &none   &none   &none
             >;
 
             label = "!@# 123";
