@@ -284,7 +284,7 @@
             bindings = <
 &trans  &kp EXCL       &kp AT    &kp HASH   &kp DOLLAR  &kp PRCNT                                                       &none      &kp N7  &kp N8  &kp N9  &kp KP_ASTERISK  &kp KP_DIVIDE
 &trans  &kp CARET      &kp AMPS  &kp STAR   &kp LT      &kp GT                                                      &kp N0     &kp N4  &kp N5  &kp N6  &kp KP_PLUS      &kp KP_MINUS
-&trans  &kp BACKSLASH  &kp PIPE  &kp SLASH  &kp PLUS    &kp MINUS  &kp EQUAL  &trans  &to 3   &kp BACKSPACE  &kp UP    &kp N0     &kp N1  &kp N2  &kp N3  &dotcomma        &kp KP_EQUAL
+&trans  &kp BACKSLASH  &kp PIPE  &kp SLASH  &kp PLUS    &kp MINUS  &kp EQUAL  &trans  &kp BACKSPACE  &kp UP    &kp N0     &kp N1  &kp N2  &kp N3  &dotcomma        &kp KP_EQUAL
                                  &trans     &trans      &none      &trans     &trans  &kp LEFT       &kp DOWN  &kp RIGHT  &none   &none
             >;
 
