@@ -282,10 +282,10 @@
 
         num_layer {
             bindings = <
-&kp F11        &kp F1        &kp F2         &kp F3        &kp F4         &kp F5                                                       &none      &kp N7  &kp N8  &kp N9  &kp KP_ASTERISK  &kp KP_DIVIDE
-&mt LSHFT F12  &kp F6        &hml LCTRL F7  &hml LALT F8  &hml LSHFT F9  &kp F10                                                      &kp N0     &kp N4  &kp N5  &kp N6  &kp KP_PLUS      &kp KP_MINUS
-&bt BT_CLR     &bt BT_SEL 0  &bt BT_SEL 1   &bt BT_SEL 2  &bt BT_SEL 3   &bt BT_SEL 4  &out OUT_TOG  &to 3   &kp BACKSPACE  &kp UP    &kp N0     &kp N1  &kp N2  &kp N3  &dotcomma        &kp KP_EQUAL
-                                            &trans        &trans         &to 0         &trans        &trans  &kp LEFT       &kp DOWN  &kp RIGHT  &none   &none
+&trans  &kp EXCL       &kp AT    &kp HASH   &kp DOLLAR  &kp PRCNT                                                       &none      &kp N7  &kp N8  &kp N9  &kp KP_ASTERISK  &kp KP_DIVIDE
+&trans  &kp CARET      &kp AMPS  &kp STAR   &kp LT      &kp GT                                                      &kp N0     &kp N4  &kp N5  &kp N6  &kp KP_PLUS      &kp KP_MINUS
+&trans  &kp BACKSLASH  &kp PIPE  &kp SLASH  &kp PLUS    &kp MINUS  &kp EQUAL  &trans  &to 3   &kp BACKSPACE  &kp UP    &kp N0     &kp N1  &kp N2  &kp N3  &dotcomma        &kp KP_EQUAL
+                                 &trans     &trans      &none      &trans     &trans  &kp LEFT       &kp DOWN  &kp RIGHT  &none   &none
             >;
 
             label = "123";
@@ -293,10 +293,10 @@
 
         symnav_layer {
             bindings = <
-&trans  &kp EXCL       &kp AT    &kp HASH   &kp DOLLAR  &kp PRCNT                                   &none     &none     &kp INSERT  &kp PAUSE_BREAK  &kp PRINTSCREEN  &kp K_APPLICATION
-&trans  &kp CARET      &kp AMPS  &kp STAR   &kp LT      &kp GT                                      &kp HOME  &kp LEFT  &kp DOWN    &kp UP           &kp RIGHT        &kp END
-&trans  &kp BACKSLASH  &kp PIPE  &kp SLASH  &kp PLUS    &kp MINUS  &kp EQUAL  &trans  &none  &none  &none     &none     &none       &none            &none            &none
-                                 &trans     &trans      &none      &trans     &trans  &none  &to 0  &none     &none     &none
+&kp F11        &kp F1        &kp F2         &kp F3        &kp F4         &kp F5                                   &none     &none     &kp INSERT  &kp PAUSE_BREAK  &kp PRINTSCREEN  &kp K_APPLICATION
+&mt LSHFT F12  &kp F6        &hml LCTRL F7  &hml LALT F8  &hml LSHFT F9  &kp F10                                  &kp HOME  &kp LEFT  &kp DOWN    &kp UP           &kp RIGHT        &kp END
+&bt BT_CLR     &bt BT_SEL 0  &bt BT_SEL 1   &bt BT_SEL 2  &bt BT_SEL 3   &bt BT_SEL 4  &out OUT_TOG  &to 3  &none  &none  &none     &none     &none       &none            &none            &none
+                                            &trans        &trans         &to 0         &trans        &trans  &none  &to 0  &none     &none     &none
             >;
 
             label = "!@#";
