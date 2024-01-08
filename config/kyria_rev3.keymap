@@ -287,7 +287,7 @@
         funcnav_layer {
             bindings = <
 &kp F11        &kp F1        &kp F2         &kp F3        &kp F4         &kp F5                                            &none     &none     &kp INSERT  &kp PAUSE_BREAK  &kp PRINTSCREEN  &kp K_APPLICATION
-&mt LSHFT F12  &kp F6        &hml LCTRL F7  &hml LALT F8  &hml LSHFT F9  &kp F10                                           &kp HOME  &kp LEFT  &kp UP      &kp DOWN         &kp RIGHT        &kp END
+&mt LSHFT F12  &kp F6        &hml LCTRL F7  &hml LALT F8  &hml LSHFT F9  &kp F10                                           &kp LEFT  &kp DOWN  &kp UP      &kp RIGHT        &kp HOME         &kp END
 &bt BT_CLR     &bt BT_SEL 0  &bt BT_SEL 1   &bt BT_SEL 2  &bt BT_SEL 3   &bt BT_SEL 4  &out OUT_TOG  &to 3   &none  &none  &none     &none     &none       &none            &none            &none
                                             &trans        &trans         &to 0         &trans        &trans  &none  &none  &to 0     &none     &none
             >;
