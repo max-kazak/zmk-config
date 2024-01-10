@@ -225,14 +225,14 @@
             compatible = "zmk,behavior-tap-dance";
             label = "LAYER_STICK_TOGGLE_1";
             #binding-cells = <0>;
-            bindings = <&sl 1>, <&to 1>;
+            bindings = <&mo 1>, <&to 1>;
         };
 
         lsticktgl_2: layer_stick_toggle_2 {
             compatible = "zmk,behavior-tap-dance";
             label = "LAYER_STICK_TOGGLE_2";
             #binding-cells = <0>;
-            bindings = <&sl 2>, <&to 2>;
+            bindings = <&mo 2>, <&to 2>;
         };
 
         gg: gg {
