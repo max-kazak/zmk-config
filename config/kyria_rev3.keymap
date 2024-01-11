@@ -267,7 +267,7 @@
 &kp TAB          &kp Q  &kp W  &kp E     &kp R              &td_t                                                                  &td_y  &kp U               &kp I      &kp O           &kp P      &gresc
 &mt LSHIFT CAPS  &kp A  &kp S  &kp D     &hml LEFT_SHIFT F  &td_g                                                                  &td_h  &hmr RIGHT_SHIFT J  &kp K      &kp L           &td_cln    &td_qt
 &sk LCTRL        &kp Z  &kp X  &kp C     &kp V              &td_b         &kp ENTER  &kp DEL        &kp PAUSE_BREAK  &kp MINUS     &td_n  &kp M               &kp COMMA  &ptrhold 0 DOT  &kp SLASH  &kp BACKSLASH
-                               &kp LGUI  &sk LALT           &lsticktgl_2  &spcund    &kp BACKSPACE  &sk RSHFT        &lsticktgl_1  &to 2  &kp RCTRL           &kp RALT
+                               &to 3     &kp LGUI           &sk LALT      &spcund    &kp BACKSPACE  &sk RSHFT        &lsticktgl_1  &lsticktgl_2  &kp RCTRL           &kp RALT
             >;
 
             label = "abc";
@@ -284,12 +284,23 @@
             label = "!@# 123";
         };
 
-        funcnav_layer {
+        nav_layer {
+            bindings = <
+&trans        &none        &none         &none        &none         &none                                            &none     &none     &kp INSERT  &kp PAUSE_BREAK  &kp PRINTSCREEN  &kp K_APPLICATION
+&trans  &none       &none  &none  &none  &none                                           &kp LEFT  &kp DOWN  &kp UP      &kp RIGHT        &kp HOME         &kp END
+&trans     &none  &none   &none  &none   &none  &trans  &trans   &none  &none  &none     &none     &none       &none            &none            &none
+                                            &none        &trans         &trans         &trans        &trans  &none  &to 0  &to 0     &none     &none
+            >;
+
+            label = "NAV";
+        };
+
+        func_layer {
             bindings = <
 &kp F11        &kp F1        &kp F2         &kp F3        &kp F4         &kp F5                                            &none     &none     &kp INSERT  &kp PAUSE_BREAK  &kp PRINTSCREEN  &kp K_APPLICATION
-&mt LSHFT F12  &kp F6        &hml LCTRL F7  &hml LALT F8  &hml LSHFT F9  &kp F10                                           &kp LEFT  &kp DOWN  &kp UP      &kp RIGHT        &kp HOME         &kp END
-&bt BT_CLR     &bt BT_SEL 0  &bt BT_SEL 1   &bt BT_SEL 2  &bt BT_SEL 3   &bt BT_SEL 4  &out OUT_TOG  &to 3   &none  &none  &none     &none     &none       &none            &none            &none
-                                            &trans        &trans         &to 0         &trans        &trans  &none  &to 0  &to 0     &none     &none
+&kp F12        &kp F6        &kp F7         &kp F8        &kp F9         &kp F10                                           &none     &none     &none       &none            &none            &none
+&bt BT_CLR     &bt BT_SEL 0  &bt BT_SEL 1   &bt BT_SEL 2  &bt BT_SEL 3   &bt BT_SEL 4  &out OUT_TOG  &to 4   &none  &none  &none     &none     &none       &none            &none            &none
+                                            &to 0         &none          &none         &none         &none   &none  &none  &none     &none     &none
             >;
 
             label = "FUNC";
