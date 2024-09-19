@@ -246,7 +246,7 @@
         dotcomma: dotcomma {
             compatible = "zmk,behavior-mod-morph";
             label = "DOTCOMMA";
-            bindings = <&kp KP_DOT>, <&kp COMMA>;
+            bindings = <&kp DOT>, <&kp COMMA>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL|MOD_LSFT|MOD_LALT|MOD_RCTL|MOD_RSFT|MOD_RALT)>;
