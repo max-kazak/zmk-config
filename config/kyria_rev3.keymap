@@ -143,7 +143,7 @@
         td_cln: td_cln {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            bindings = <&mt COLON SEMICOLON>, <&dbl_key COLON OPER>;
+            bindings = <&mt COLON SEMICOLON>, <&dbl_key COLON>;
         };
 
         ptrhold: ptrhold {
