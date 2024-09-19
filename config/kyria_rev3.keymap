@@ -61,6 +61,20 @@
             #binding-cells = <0>;
             bindings = <&kp MINUS &kp GT>;
         };
+
+        tmux: tmux {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&kp LC(B) &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            label = "TMUX";
+        };
+
+        tmux_sync: tmux_sync {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&tmux COLON &kp S &kp E &kp T &kp W &kp SPACE &kp S &kp Y &kp N &kp C &kp TAB &kp ENTER>;
+            label = "TMUX_SYNC";
+        };
     };
 
     behaviors {
@@ -189,10 +203,10 @@
 
         default_layer {
             bindings = <
-&kp TAB          &kp Q  &kp W  &kp E  &kp R     &td_t                                                              &td_y         &kp U      &kp I      &kp O           &kp P      &gresc
-&mt LSHIFT CAPS  &kp A  &kp S  &kp D  &kp F     &td_g                                                              &td_h         &kp J      &kp K      &kp L           &td_cln    &td_qt
-&sk LCTRL        &kp Z  &kp X  &kp C  &kp V     &td_b     &kp ENTER  &kp DEL        &kp PAUSE_BREAK  &kp MINUS     &td_n         &kp M      &kp COMMA  &ptrhold 0 DOT  &kp SLASH  &kp BACKSLASH
-                               &sl 3  &kp LGUI  &sk LALT  &spcund    &kp BACKSPACE  &sk RSHFT        &lsticktgl_1  &lsticktgl_2  &kp RCTRL  &kp RALT
+&kp TAB          &kp Q  &kp W  &kp E  &kp R     &td_t                                                              &td_y         &kp U        &kp I      &kp O           &kp P      &gresc
+&mt LSHIFT CAPS  &kp A  &kp S  &kp D  &kp F     &td_g                                                              &td_h         &kp J        &kp K      &kp L           &td_cln    &td_qt
+&sk LCTRL        &kp Z  &kp X  &kp C  &kp V     &td_b     &kp ENTER  &kp DEL        &kp PAUSE_BREAK  &kp MINUS     &td_n         &kp M        &kp COMMA  &ptrhold 0 DOT  &kp SLASH  &kp BACKSLASH
+                               &sl 3  &kp LGUI  &sk LALT  &spcund    &kp BACKSPACE  &sk RSHFT        &lsticktgl_1  &lsticktgl_2  &lt 4 LC(B)  &kp RALT
             >;
 
             display-name = "abc";
@@ -211,10 +225,10 @@
 
         nav_layer {
             bindings = <
-&trans  &none  &none  &none  &none   &none                                 &none     &none     &none   &none      &none     &kp ESC
-&trans  &none  &none  &none  &none   &none                                 &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp HOME  &kp END
-&trans  &none  &none  &none  &none   &none   &trans  &trans  &none  &none  &none     &none     &none   &none      &none     &none
-                      &none  &trans  &trans  &trans  &trans  &none  &to 0  &to 0     &none     &none
+&kp LA(TAB)  &none  &none  &none  &none   &none                                 &none     &none     &none   &none      &none     &kp ESC
+&trans       &none  &none  &none  &none   &none                                 &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp HOME  &kp END
+&trans       &none  &none  &none  &none   &none   &trans  &trans  &none  &none  &none     &none     &none   &none      &none     &none
+                           &none  &trans  &trans  &trans  &trans  &none  &to 0  &to 0     &none     &none
             >;
 
             display-name = "NAV";
@@ -229,6 +243,15 @@
             >;
 
             display-name = "FUNC";
+        };
+
+        tmux {
+            bindings = <
+&none  &tmux AMPS  &tmux W     &none    &none  &tmux PRCNT                                            &none             &none       &none     &none        &none    &none
+&none  &none       &tmux_sync  &tmux D  &none  &tmux DOUBLE_QUOTES                                    &tmux LEFT_ARROW  &tmux DOWN  &tmux UP  &tmux RIGHT  &tmux P  &tmux N
+&none  &tmux Z     &tmux X     &tmux C  &none  &none                &none        &none  &none  &none  &none             &none       &none     &none        &none    &none
+                               &none    &none  &none                &tmux SPACE  &none  &none  &none  &none             &to 0       &none
+            >;
         };
     };
 };
