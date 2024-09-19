@@ -33,9 +33,9 @@
 / {
     macros {
         dbl_key: dbl_key {
-            compatible = "zmk,behavior-macro-two-param";
-            #binding-cells = <2>;
-            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_2to1 &kp MACRO_PLACEHOLDER>;
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
         };
 
         cboc: cboc {
@@ -88,7 +88,7 @@
             tapping-term-ms = <100>;
         };
 
-        dbl_mt_l: dbl_mt_l {
+        dbl_mt: dbl_mt {
             compatible = "zmk,behavior-hold-tap";
             bindings = <&dbl_key>, <&dbl_key>;
 
@@ -137,7 +137,7 @@
             #binding-cells = <0>;
             bindings =
                 <&mt DOUBLE_QUOTES SINGLE_QUOTE>,
-                <&dbl_mt_l DOUBLE_QUOTES SINGLE_QUOTE>;
+                <&dbl_mt DOUBLE_QUOTES SINGLE_QUOTE>;
         };
 
         td_cln: td_cln {
@@ -201,7 +201,7 @@
         symnum_layer {
             bindings = <
 &trans  &kp EXCL       &kp AT    &kp HASH   &kp DOLLAR  &kp PRCNT                                   &none   &kp N7  &kp N8  &kp N9  &kp KP_ASTERISK  &kp KP_DIVIDE
-&trans  &kp CARET      &kp AMPS  &kp STAR   &none       &kp GT                                      &kp N0  &kp N4  &kp N5  &kp N6  &kp KP_PLUS      &kp KP_MINUS
+&trans  &kp CARET      &kp AMPS  &kp STAR   &kp LT      &kp GT                                      &kp N0  &kp N4  &kp N5  &kp N6  &kp KP_PLUS      &kp KP_MINUS
 &trans  &kp BACKSLASH  &kp PIPE  &kp SLASH  &kp PLUS    &kp MINUS  &kp EQUAL  &trans  &none  &none  &kp N0  &kp N1  &kp N2  &kp N3  &dotcomma        &kp KP_EQUAL
                                  &trans     &trans      &none      &trans     &trans  &none  &to 0  &none   &none   &none
             >;
