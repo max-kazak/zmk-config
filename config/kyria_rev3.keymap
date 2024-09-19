@@ -291,24 +291,13 @@
 
         func_layer {
             bindings = <
-&kp F11     &kp F1        &kp F2        &kp F3        &kp F4        &kp F5                                           &none  &none  &kp INSERT  &kp PAUSE_BREAK  &kp PRINTSCREEN  &kp K_APPLICATION
-&kp F12     &kp F6        &kp F7        &kp F8        &kp F9        &kp F10                                          &none  &none  &none       &none            &none            &none
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &out OUT_TOG  &to 4  &none  &none  &none  &none  &none       &none            &none            &none
-                                        &to 0         &none         &none         &none         &none  &none  &none  &none  &none  &none
+&kp F11  &kp F1  &kp F2  &kp F3  &kp F4      &kp F5                                              &none  &none  &kp INSERT  &kp PAUSE_BREAK  &kp PRINTSCREEN  &kp K_APPLICATION
+&kp F12  &kp F6  &kp F7  &kp F8  &kp F9      &kp F10                                             &none  &none  &none       &none            &none            &none
+&none    &none   &none   &none   &bt BT_PRV  &bt BT_NXT  &out OUT_TOG  &bt BT_CLR  &none  &none  &none  &none  &none       &none            &none            &none
+                         &to 0   &none       &none       &none         &none       &none  &none  &none  &none  &none
             >;
 
             label = "FUNC";
-        };
-
-        game_layer {
-            bindings = <
-&kp ESC  &none           &kp Q  &kp W     &kp E     &kp R                                          &none  &none  &none  &none  &none  &none
-&kp TAB  &kp LEFT_SHIFT  &kp A  &kp S     &kp D     &kp F                                          &none  &none  &none  &none  &none  &none
-&kp M    &ij             &kp Z  &kp X     &kp C     &kp V      &kp B      &gg        &none  &none  &none  &none  &none  &none  &none  &none
-                                &kp CAPS  &kp LALT  &kp LCTRL  &kp SPACE  &kp ENTER  &none  &none  &none  &none  &none
-            >;
-
-            label = "GAME";
         };
     };
 };
