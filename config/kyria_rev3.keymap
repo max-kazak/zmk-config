@@ -254,10 +254,10 @@
 
         tmux {
             bindings = <
-&none  &tmux AMPS  &tmux W     &none    &none  &tmux PRCNT                                            &none             &none        &none     &none        &none    &none
-&none  &none       &tmux_sync  &tmux D  &none  &tmux DOUBLE_QUOTES                                    &tmux LEFT_ARROW  &tmux DOWN   &tmux UP  &tmux RIGHT  &tmux P  &tmux N
-&none  &tmux Z     &tmux X     &tmux C  &none  &none                &none        &none  &none  &none  &none             &tmux_mouse  &none     &none        &none    &none
-                               &none    &none  &none                &tmux SPACE  &none  &none  &none  &none             &to 0        &none
+&none   &tmux AMPS  &tmux W     &none    &none  &tmux PRCNT                                            &none             &none        &none     &none        &none    &none
+&none   &none       &tmux_sync  &tmux D  &none  &tmux DOUBLE_QUOTES                                    &tmux LEFT_ARROW  &tmux DOWN   &tmux UP  &tmux RIGHT  &tmux P  &tmux N
+&trans  &tmux Z     &tmux X     &tmux C  &none  &none                &none        &none  &none  &none  &none             &tmux_mouse  &none     &none        &none    &none
+                                &none    &none  &none                &tmux SPACE  &none  &none  &none  &none             &to 0        &none
             >;
         };
     };
