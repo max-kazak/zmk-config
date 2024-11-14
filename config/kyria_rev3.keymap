@@ -86,7 +86,7 @@
         tmux_killsession: tmux_killsession {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp COLON &kp K &kp I &kp L &kp L &kp MINUS &kp S &kp E &kp S &kp S &kp I &kp O &kp N &kp ENTER>;
+            bindings = <&tmux COLON &kp K &kp I &kp L &kp L &kp MINUS &kp S &kp E &kp S &kp S &kp I &kp O &kp N &kp ENTER>;
             label = "TMUX_KILLSESSION";
         };
     };
